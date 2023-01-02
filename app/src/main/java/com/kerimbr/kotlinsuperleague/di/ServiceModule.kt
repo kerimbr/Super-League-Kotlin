@@ -1,11 +1,12 @@
 package com.kerimbr.kotlinsuperleague.di
 
 import dagger.Module
-import javax.inject.Singleton
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 
 
 @Module
-@Singleton
+@InstallIn(SingletonComponent::class)
 object ServiceModule {
 
 
