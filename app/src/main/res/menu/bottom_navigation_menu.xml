@@ -3,17 +3,17 @@
 
 
     <item
-        android:id="@+id/navigation_fixtures"
+        android:id="@+id/fixtureFragment"
         android:icon="@drawable/ic_fixture_selector"
         android:title="@string/title_fixtures" />
 
     <item
-        android:id="@+id/navigation_teams"
+        android:id="@+id/teamsFragment"
         android:icon="@drawable/ic_teams_selector"
         android:title="@string/title_teams" />
 
     <item
-        android:id="@+id/navigation_players"
+        android:id="@+id/playersFragment"
         android:icon="@drawable/ic_players_selector"
         android:title="@string/title_players" />
 
