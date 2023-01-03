@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/fixtureFragment">
+
+    <fragment
+        android:id="@+id/fixtureFragment"
+        android:name="com.kerimbr.kotlinsuperleague.ui.fixture.FixtureFragment"
+        android:label="FixtureFragment" />
+    <fragment
+        android:id="@+id/teamsFragment"
+        android:name="com.kerimbr.kotlinsuperleague.ui.teams.TeamsFragment"
+        android:label="TeamsFragment" />
+    <fragment
+        android:id="@+id/playersFragment"
+        android:name="com.kerimbr.kotlinsuperleague.ui.players.PlayersFragment"
+        android:label="PlayersFragment" />
+</navigation>
