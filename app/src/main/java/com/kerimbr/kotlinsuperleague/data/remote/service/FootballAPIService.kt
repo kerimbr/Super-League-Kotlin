@@ -10,7 +10,7 @@ import retrofit2.http.Query
 interface FootballAPIService {
 
     @GET("/fixtures")
-    suspend fun getAllLastFixtures(
+    suspend fun getAllFixtures(
         @Query("league") league: Int = LEAGUE_ID,
         @Query("season") season: Int = LEAGUE_SEASONS.last()
     ) : Response<FixtureRootModel>
