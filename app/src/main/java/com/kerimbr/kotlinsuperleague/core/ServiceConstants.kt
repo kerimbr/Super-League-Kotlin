@@ -12,3 +12,5 @@ const val BASE_URL = "https://v3.football.api-sports.io"
 const val TIME_ZONE = "Europe/Istanbul"
 const val LEAGUE_ID = 203
 val LEAGUE_SEASONS = immutableListOf(2018, 2019, 2020, 2021, 2022)
+
+const val FIXTURE_MAX_ITEM_SIZE = 99

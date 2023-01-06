@@ -8,4 +8,8 @@ interface DataRepository {
 
     suspend fun getAllFixtures() : Flow<Resource<FixtureRootModel>>
 
+    suspend fun getNextFixtures() : Flow<Resource<FixtureRootModel>>
+
+    suspend fun getLastFixtures() : Flow<Resource<FixtureRootModel>>
+
 }
