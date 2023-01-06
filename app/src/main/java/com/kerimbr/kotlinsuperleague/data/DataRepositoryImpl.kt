@@ -12,6 +12,10 @@ class DataRepositoryImpl @Inject constructor(
     override suspend fun getAllFixtures() : Flow<Resource<FixtureRootModel>>
             = remoteDataSource.getAllFixtures()
 
+    override suspend fun getNextFixtures() : Flow<Resource<FixtureRootModel>>
+            = remoteDataSource.getNextFixtures()
 
+    override suspend fun getLastFixtures() : Flow<Resource<FixtureRootModel>>
+            = remoteDataSource.getLastFixtures()
 
 }

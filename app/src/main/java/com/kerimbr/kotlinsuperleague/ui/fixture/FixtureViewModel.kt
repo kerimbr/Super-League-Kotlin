@@ -26,7 +26,7 @@ class FixtureViewModel @Inject constructor(
 
         if (_fixtureViewState.value.fixtures == null) {
             viewModelScope.launch {
-                dataRepository.getAllFixtures().collect {
+                dataRepository.getNextFixtures().collect {
                     when (it) {
                         is Resource.Success -> {
                             _fixtureViewState.value = FixtureViewState(

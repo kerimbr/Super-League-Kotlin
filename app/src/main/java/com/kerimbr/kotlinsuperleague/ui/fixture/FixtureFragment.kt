@@ -1,13 +1,10 @@
 package com.kerimbr.kotlinsuperleague.ui.fixture
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.viewModelScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kerimbr.kotlinsuperleague.adapters.FixtureRVAdapter
 import com.kerimbr.kotlinsuperleague.adapters.base.BaseRVAdapter
@@ -15,9 +12,10 @@ import com.kerimbr.kotlinsuperleague.data.dto.fixture.FixtureResponse
 import com.kerimbr.kotlinsuperleague.data.dto.fixture.FixtureRootModel
 import com.kerimbr.kotlinsuperleague.databinding.FragmentFixtureBinding
 import com.kerimbr.kotlinsuperleague.ui.base.BaseFragment
+import com.kerimbr.kotlinsuperleague.utils.Utils
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
+import java.util.*
 
 @AndroidEntryPoint
 class FixtureFragment : BaseFragment() {

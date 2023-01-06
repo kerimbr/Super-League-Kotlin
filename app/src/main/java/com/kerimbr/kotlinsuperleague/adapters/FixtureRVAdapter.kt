@@ -5,6 +5,8 @@ import com.kerimbr.kotlinsuperleague.R
 import com.kerimbr.kotlinsuperleague.adapters.base.BaseRVAdapter
 import com.kerimbr.kotlinsuperleague.data.dto.fixture.FixtureResponse
 import com.kerimbr.kotlinsuperleague.databinding.ItemFixtureBinding
+import com.kerimbr.kotlinsuperleague.utils.Utils
+import com.kerimbr.kotlinsuperleague.utils.extensions.getImageFromUrl
 
 class FixtureRVAdapter(
     val fixtures: List<FixtureResponse>,
@@ -19,6 +21,17 @@ class FixtureRVAdapter(
 
     override fun onBind(binding: ItemFixtureBinding, item: FixtureResponse) {
         binding.fixture = item
+
+        binding.fixtureCard.setOnClickListener {
+            onFixtureClicked.onItemClick(item)
+        }
+
+        binding.homeTeamLogoImage.getImageFromUrl(item.teams.home.logo)
+        binding.awayTeamLogoImage.getImageFromUrl(item.teams.away.logo)
+
+        binding.time = Utils.getFixtureHour(item)
+        binding.date = Utils.getFixtureDateStr(item)
+
     }
 
 }
