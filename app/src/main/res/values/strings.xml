@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Kotlin Super League</string>
     <string name="title_fixtures">Fixtures</string>
-    <string name="title_teams">Teams</string>
     <string name="title_players">Players</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -18,5 +17,7 @@
         Phasellus a turpis nisl. Pellentesque id rhoncus ex. Donec eleifend commodo dui, a dapibus erat consectetur ac. Proin dapibus feugiat enim ultrices finibus. Pellentesque et mauris tellus. Duis finibus nisl nunc, non pellentesque tortor commodo quis. Morbi dapibus ex in lorem sagittis iaculis vitae sit amet odio. Nunc tempor massa erat, ut hendrerit neque malesuada non. Aenean viverra tristique pretium. Duis eleifend neque vitae leo porta vehicula finibus et ipsum. Pellentesque at magna orci. Sed vitae urna vel sem mollis dignissim ac eu erat. Maecenas vehicula metus gravida mattis pharetra. Duis egestas neque mollis tempor viverra.
         In pulvinar odio nisi, eget semper leo lacinia vel. Etiam rhoncus est eu nunc posuere bibendum. Donec laoreet diam mi, ac sollicitudin tortor dapibus vitae. Curabitur viverra, augue sollicitudin fringilla volutpat, est sem fermentum mauris, euismod scelerisque enim lorem ac massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus porttitor id sapien at facilisis. Mauris porta ante a sollicitudin eleifend. In hac habitasse platea dictumst. Praesent semper tempor tortor sit amet ornare. Nam eu ligula et diam ultricies tincidunt vel tincidunt nisi. Pellentesque auctor, augue eget ornare convallis, justo dui bibendum massa, eget euismod nibh urna eu justo. Nullam nisl mi, interdum sit amet tempus a, faucibus a elit. Nullam bibendum sem quis odio ornare ultrices.
     </string>
+    <string name="fixture_menu_item_filter">Filter</string>
+    <string name="title_standings">Standings</string>
 
 </resources>

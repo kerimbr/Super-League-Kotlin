@@ -2,15 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
 
+
+    <item
+        android:id="@+id/standingsFragment"
+        android:icon="@drawable/ic_teams_selector"
+        android:title="@string/title_standings" />
+
+
     <item
         android:id="@+id/fixtureFragment"
         android:icon="@drawable/ic_fixture_selector"
         android:title="@string/title_fixtures" />
-
-    <item
-        android:id="@+id/teamsFragment"
-        android:icon="@drawable/ic_teams_selector"
-        android:title="@string/title_teams" />
 
     <item
         android:id="@+id/playersFragment"
