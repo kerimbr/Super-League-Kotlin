@@ -32,7 +32,15 @@ class FixtureFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupToolBar()
+
         observeUI()
+    }
+
+    private fun setupToolBar() {
+        binding.fixtureToolbar.setNavigationOnClickListener {
+            println("Navigation icon clicked")
+        }
     }
 
     private fun observeUI() {

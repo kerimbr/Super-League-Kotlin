@@ -33,10 +33,13 @@
                     android:layout_height="?attr/collapsingToolbarLayoutMediumSize">
 
                     <com.google.android.material.appbar.MaterialToolbar
+                        android:id="@+id/fixture_toolbar"
                         android:layout_width="match_parent"
                         android:layout_height="?attr/actionBarSize"
                         android:elevation="0dp"
                         app:layout_collapseMode="pin"
+                        app:navigationIcon="@drawable/ic_round_menu_24"
+                        app:menu="@menu/fixture_menu"
                         app:title="@string/title_fixtures" />
 
                 </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -52,16 +55,12 @@
             </com.google.android.material.appbar.AppBarLayout>
 
 
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/fixture_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-            </androidx.recyclerview.widget.RecyclerView>
-
-
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                />
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
