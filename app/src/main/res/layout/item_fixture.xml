@@ -143,7 +143,7 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="2dp"
                         android:gravity="center"
-                        android:maxLength="25"
+                        android:maxLength="20"
                         android:text="@{fixture.fixture.venue.name}"
                         android:textFontWeight="400"
                         android:textStyle="normal" />
