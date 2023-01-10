@@ -19,9 +19,11 @@ class FixtureRVAdapter(
     override val layoutRes: Int
         get() = R.layout.item_fixture
 
-    override fun onBind(binding: ItemFixtureBinding, item: FixtureResponse) {
-        binding.fixture = item
+    override fun onBind(binding: ItemFixtureBinding, position: Int) {
 
+        val item: FixtureResponse = fixtures[position]
+
+        binding.fixture = item
         binding.fixtureCard.setOnClickListener {
             onFixtureClicked.onItemClick(item)
         }
