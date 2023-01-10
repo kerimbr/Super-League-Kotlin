@@ -13,4 +13,6 @@ class RemoteDataSource @Inject constructor(
 
     suspend fun getLastFixtures() = getResult { footballAPIService.getLastFixtures() }
 
+    suspend fun getStandings() = getResult { footballAPIService.getStandings() }
+
 }
