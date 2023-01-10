@@ -19,7 +19,8 @@ abstract class BaseRVAdapter<BINDING : ViewDataBinding, MODEL : Any>(
     @get:LayoutRes
     abstract val layoutRes: Int
 
-    abstract fun onBind(binding: BINDING, item: MODEL)
+    abstract fun onBind(binding: BINDING, position: Int)
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<BINDING> {
         val binder = DataBindingUtil.inflate<BINDING>(
@@ -33,10 +34,24 @@ abstract class BaseRVAdapter<BINDING : ViewDataBinding, MODEL : Any>(
     }
 
     override fun onBindViewHolder(holder: BaseViewHolder<BINDING>, position: Int) {
-        onBind(holder.binding, items[position])
+        onBind(holder.binding, position)
     }
 
     override fun getItemCount(): Int = items.size
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
