@@ -48,6 +48,7 @@
                 android:id="@+id/standings_recycler_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                tools:listitem="@layout/item_standings_table_row"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
             />
 
