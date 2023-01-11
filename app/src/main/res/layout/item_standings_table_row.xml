@@ -3,6 +3,7 @@
 
 
     <data>
+        <import type="android.view.View"/>
         <variable
             name="utils"
             type="com.kerimbr.kotlinsuperleague.utils.Utils" />
@@ -31,6 +32,24 @@
                 android:padding="10dp"
                 android:text="@{isHeader ? `#` : String.valueOf(standing.rank)}" />
 
+            <ImageView
+                android:id="@+id/standingsTableRowTeamLogo"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:visibility="@{isHeader ? View.GONE : View.VISIBLE}"
+                android:src="@drawable/ic_launcher_background"
+                android:contentDescription="@{standing.team.name}" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:visibility="@{isHeader ? View.VISIBLE : View.GONE}"
+                />
+
             <com.google.android.material.textview.MaterialTextView
                 style="@style/TextAppearance.AppCompat.Menu"
                 android:layout_height="wrap_content"
@@ -40,91 +59,77 @@
                 android:padding="10dp"
                 android:text="@{isHeader ? `Team Name` : standing.team.name}" />
 
+
+
             <com.google.android.material.textview.MaterialTextView
                 style="@style/TextAppearance.AppCompat.Menu"
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:gravity="start"
-                android:maxWidth="50dp"
-                android:minWidth="30dp"
+                android:gravity="center"
                 android:padding="10dp"
                 android:text="@{isHeader ? `MP` : String.valueOf(standing.all.played) }" />
 
             <com.google.android.material.textview.MaterialTextView
                 style="@style/TextAppearance.AppCompat.Menu"
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:gravity="start"
-                android:maxWidth="50dp"
-                android:minWidth="30dp"
+                android:gravity="center"
                 android:padding="10dp"
                 android:text="@{isHeader ? `W` : String.valueOf(standing.all.win)}" />
 
             <com.google.android.material.textview.MaterialTextView
                 style="@style/TextAppearance.AppCompat.Menu"
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:gravity="start"
-                android:maxWidth="50dp"
-                android:minWidth="30dp"
+                android:gravity="center"
                 android:padding="10dp"
                 android:text="@{isHeader ? `D` : String.valueOf(standing.all.draw)}" />
 
             <com.google.android.material.textview.MaterialTextView
                 style="@style/TextAppearance.AppCompat.Menu"
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:gravity="start"
-                android:maxWidth="50dp"
-                android:minWidth="30dp"
+                android:gravity="center"
                 android:padding="10dp"
                 android:text="@{isHeader ? `L` : String.valueOf(standing.all.lose)}" />
 
             <com.google.android.material.textview.MaterialTextView
                 style="@style/TextAppearance.AppCompat.Menu"
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:gravity="start"
-                android:maxWidth="50dp"
-                android:minWidth="30dp"
+                android:gravity="center"
                 android:padding="10dp"
                 android:text="@{isHeader ? `GF` : String.valueOf(standing.all.goals.forX)}" />
 
             <com.google.android.material.textview.MaterialTextView
                 style="@style/TextAppearance.AppCompat.Menu"
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:gravity="start"
-                android:maxWidth="50dp"
-                android:minWidth="30dp"
+                android:gravity="center"
                 android:padding="10dp"
                 android:text="@{isHeader ? `GA` : String.valueOf(standing.all.goals.against)}" />
 
             <com.google.android.material.textview.MaterialTextView
                 style="@style/TextAppearance.AppCompat.Menu"
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:gravity="start"
-                android:maxWidth="50dp"
-                android:minWidth="30dp"
+                android:gravity="center"
                 android:padding="10dp"
                 android:text="@{isHeader ? `GD` : String.valueOf(standing.goalsDiff)}" />
 
             <com.google.android.material.textview.MaterialTextView
                 style="@style/TextAppearance.AppCompat.Menu"
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:gravity="start"
-                android:maxWidth="50dp"
-                android:minWidth="30dp"
+                android:gravity="center"
                 android:padding="10dp"
                 android:text="@{isHeader ? `GD` : String.valueOf(standing.points)}" />
 

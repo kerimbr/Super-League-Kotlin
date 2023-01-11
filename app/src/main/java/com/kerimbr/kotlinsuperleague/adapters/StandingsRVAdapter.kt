@@ -8,6 +8,7 @@ import com.kerimbr.kotlinsuperleague.adapters.base.BaseViewHolder
 import com.kerimbr.kotlinsuperleague.data.dto.standings.All
 import com.kerimbr.kotlinsuperleague.data.dto.standings.Standing
 import com.kerimbr.kotlinsuperleague.databinding.ItemStandingsTableRowBinding
+import com.kerimbr.kotlinsuperleague.utils.extensions.getImageFromUrl
 
 class StandingsRVAdapter(
     private val standings: List<Standing>,
@@ -31,6 +32,7 @@ class StandingsRVAdapter(
 
             binding.isHeader = false
             binding.standing = item
+            binding.standingsTableRowTeamLogo.getImageFromUrl(item.team.logo)
             if (onStandingClicked != null) {
                 binding.standingsTableRow.setOnClickListener {
                     onStandingClicked.onItemClick(item)
