@@ -46,17 +46,15 @@ class StandingsFragment : BaseFragment() {
             viewModel.getStandings()
             viewModel.state.collect { state ->
                 if (state.isLoading) {
+                    binding.standingsLinearProgressIndicator.visibility = View.VISIBLE
                     binding.standingsRecyclerView.visibility = View.GONE
                 } else {
-
+                    binding.standingsLinearProgressIndicator.visibility = View.GONE
                 }
-
                 if (state.standings != null) {
                     binding.standingsRecyclerView.visibility = View.VISIBLE
                     initRecyclerView(state.standings)
-
                 }
-
             }
         }
     }

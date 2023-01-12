@@ -61,4 +61,7 @@
     <color name="md_theme_dark_surfaceTint">#54D7F3</color>
     <color name="md_theme_dark_outlineVariant">#3F484B</color>
     <color name="md_theme_dark_scrim">#000000</color>
+    <color name="form_draw">#FF7043</color>
+    <color name="form_lose">#B71C1C</color>
+    <color name="form_win">#00BCD4</color>
 </resources>
