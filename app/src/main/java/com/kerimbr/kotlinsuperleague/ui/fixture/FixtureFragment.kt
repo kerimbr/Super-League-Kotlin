@@ -48,11 +48,9 @@ class FixtureFragment : BaseFragment() {
             viewModel.fixtureViewState.collect { state ->
                 if (state.isLoading) {
                     binding.fixtureLinearProgressIndicator.visibility = View.VISIBLE
-                    binding.fixtureCircularProgressIndicator.visibility = View.VISIBLE
                     binding.fixtureRecyclerView.visibility = View.GONE
                 } else {
                     binding.fixtureLinearProgressIndicator.visibility = View.GONE
-                    binding.fixtureCircularProgressIndicator.visibility = View.GONE
                 }
 
                 if (state.fixtures != null) {

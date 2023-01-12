@@ -20,5 +20,10 @@
     <string name="fixture_menu_item_filter">Filter</string>
     <string name="title_standings">Standings</string>
     <string name="hashtag">#</string>
+    <string name="team_logo">Team Logo</string>
+    <string name="win_text">W</string>
+    <string name="lose_text">L</string>
+    <string name="draw_text">D</string>
+    <string name="form_header_title">Form (Last 5)</string>
 
 </resources>

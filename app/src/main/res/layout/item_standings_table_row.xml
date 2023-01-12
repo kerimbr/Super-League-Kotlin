@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
 
     <data>
@@ -24,7 +26,7 @@
             android:background="@{isHeader ? @color/md_theme_light_tertiaryContainer : @color/md_theme_light_surface }">
 
             <com.google.android.material.textview.MaterialTextView
-                style="@style/TextAppearance.AppCompat.Menu"
+                style="@style/TextAppearance.AppCompat.Small"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
@@ -37,110 +39,130 @@
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
+                android:padding="5dp"
                 android:gravity="center"
                 android:visibility="@{isHeader ? View.GONE : View.VISIBLE}"
                 android:src="@drawable/ic_launcher_background"
                 android:contentDescription="@{standing.team.name}" />
 
-            <View
+            <ImageView
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
+                android:padding="10dp"
                 android:gravity="center"
                 android:visibility="@{isHeader ? View.VISIBLE : View.GONE}"
-                />
+                android:src="@drawable/ic_teams_selector"
+                android:contentDescription="@string/team_logo"
+                app:tint="@color/md_theme_light_tertiary" />
 
             <com.google.android.material.textview.MaterialTextView
-                style="@style/TextAppearance.AppCompat.Menu"
+                style="@style/TextAppearance.AppCompat.Small"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:width="200dp"
+                android:width="150dp"
                 android:gravity="start"
-                android:padding="10dp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="10dp"
                 android:text="@{isHeader ? `Team Name` : standing.team.name}" />
 
 
 
             <com.google.android.material.textview.MaterialTextView
-                style="@style/TextAppearance.AppCompat.Menu"
+                style="@style/TextAppearance.AppCompat.Small"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp"
                 android:gravity="center"
-                android:padding="10dp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="10dp"
                 android:text="@{isHeader ? `MP` : String.valueOf(standing.all.played) }" />
 
             <com.google.android.material.textview.MaterialTextView
-                style="@style/TextAppearance.AppCompat.Menu"
+                style="@style/TextAppearance.AppCompat.Small"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp"
                 android:gravity="center"
-                android:padding="10dp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="10dp"
                 android:text="@{isHeader ? `W` : String.valueOf(standing.all.win)}" />
 
             <com.google.android.material.textview.MaterialTextView
-                style="@style/TextAppearance.AppCompat.Menu"
+                style="@style/TextAppearance.AppCompat.Small"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp"
                 android:gravity="center"
-                android:padding="10dp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="10dp"
                 android:text="@{isHeader ? `D` : String.valueOf(standing.all.draw)}" />
 
             <com.google.android.material.textview.MaterialTextView
-                style="@style/TextAppearance.AppCompat.Menu"
+                style="@style/TextAppearance.AppCompat.Small"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp"
                 android:gravity="center"
-                android:padding="10dp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="10dp"
                 android:text="@{isHeader ? `L` : String.valueOf(standing.all.lose)}" />
 
             <com.google.android.material.textview.MaterialTextView
-                style="@style/TextAppearance.AppCompat.Menu"
+                style="@style/TextAppearance.AppCompat.Small"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp"
                 android:gravity="center"
-                android:padding="10dp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="10dp"
                 android:text="@{isHeader ? `GF` : String.valueOf(standing.all.goals.forX)}" />
 
             <com.google.android.material.textview.MaterialTextView
-                style="@style/TextAppearance.AppCompat.Menu"
+                style="@style/TextAppearance.AppCompat.Small"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp"
                 android:gravity="center"
-                android:padding="10dp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="10dp"
                 android:text="@{isHeader ? `GA` : String.valueOf(standing.all.goals.against)}" />
 
             <com.google.android.material.textview.MaterialTextView
-                style="@style/TextAppearance.AppCompat.Menu"
+                style="@style/TextAppearance.AppCompat.Small"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp"
                 android:gravity="center"
-                android:padding="10dp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="10dp"
                 android:text="@{isHeader ? `GD` : String.valueOf(standing.goalsDiff)}" />
 
             <com.google.android.material.textview.MaterialTextView
-                style="@style/TextAppearance.AppCompat.Menu"
+                style="@style/TextAppearance.AppCompat.Small"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp"
                 android:gravity="center"
-                android:padding="10dp"
-                android:text="@{isHeader ? `GD` : String.valueOf(standing.points)}" />
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="10dp"
+                android:text="@{isHeader ? `P` : String.valueOf(standing.points)}" />
+
 
             <com.google.android.material.textview.MaterialTextView
-                style="@style/TextAppearance.AppCompat.Menu"
-                android:layout_width="200dp"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp"
                 android:gravity="start"
-                android:padding="10dp"
-                android:text="@{isHeader ? `Form` : String.valueOf(standing.form)}" />
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="10dp"
+                android:visibility="@{isHeader ? View.VISIBLE : View.GONE}"
+                android:text="@string/form_header_title" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/standings_item_form_list"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                tools:listitem="@layout/form_win_view"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="10dp"
+                android:visibility="@{isHeader ? View.GONE : View.VISIBLE}"
+                />
+
         </TableRow>
 
     </TableLayout>

@@ -1,11 +1,9 @@
 package com.kerimbr.kotlinsuperleague.adapters
 
 
-import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.kerimbr.kotlinsuperleague.R
 import com.kerimbr.kotlinsuperleague.adapters.base.BaseRVAdapter
-import com.kerimbr.kotlinsuperleague.adapters.base.BaseViewHolder
-import com.kerimbr.kotlinsuperleague.data.dto.standings.All
 import com.kerimbr.kotlinsuperleague.data.dto.standings.Standing
 import com.kerimbr.kotlinsuperleague.databinding.ItemStandingsTableRowBinding
 import com.kerimbr.kotlinsuperleague.utils.extensions.getImageFromUrl
@@ -32,6 +30,18 @@ class StandingsRVAdapter(
 
             binding.isHeader = false
             binding.standing = item
+
+            val formAdapter = TeamFormRVAdapter(
+                formString = item.form,
+            )
+
+            binding.standingsItemFormList.layoutManager = LinearLayoutManager(
+                binding.root.context,
+                LinearLayoutManager.HORIZONTAL,
+                false
+            )
+            binding.standingsItemFormList.adapter = formAdapter
+
             binding.standingsTableRowTeamLogo.getImageFromUrl(item.team.logo)
             if (onStandingClicked != null) {
                 binding.standingsTableRow.setOnClickListener {
