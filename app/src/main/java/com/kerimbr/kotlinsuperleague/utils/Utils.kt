@@ -11,27 +11,7 @@ import java.util.Date
 
 object Utils {
 
-    fun setRowColorOfStandingTable(context: Context, isHeader: Boolean): Drawable {
 
-        val nightMode = AppCompatDelegate.getDefaultNightMode()
-
-        return if (isHeader) {
-            if (nightMode == AppCompatDelegate.MODE_NIGHT_YES) {
-                context.resources.getDrawable(R.color.md_theme_dark_secondaryContainer)
-            } else {
-                context.resources.getDrawable(R.color.md_theme_light_secondaryContainer)
-                //R.color.md_theme_dark_secondaryContainer
-            }
-        } else {
-            if (nightMode == AppCompatDelegate.MODE_NIGHT_YES) {
-                context.resources.getDrawable(R.color.md_theme_dark_primaryContainer)
-                //R.color.md_theme_light_surface
-            } else {
-                context.resources.getDrawable(R.color.md_theme_light_primaryContainer)
-                //R.color.md_theme_dark_surface
-            }
-        }
-    }
 
     private fun getFixtureCalendar(fixture: FixtureResponse): Calendar {
         val timestamp: Long = fixture.fixture.timestamp.toLong() * 1000

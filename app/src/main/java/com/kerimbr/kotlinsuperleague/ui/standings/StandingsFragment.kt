@@ -6,8 +6,10 @@ import android.view.View
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kerimbr.kotlinsuperleague.adapters.StandingsRVAdapter
+import com.kerimbr.kotlinsuperleague.adapters.base.BaseRVAdapter
 import com.kerimbr.kotlinsuperleague.data.dto.standings.Standing
 import com.kerimbr.kotlinsuperleague.databinding.FragmentStandingsBinding
 import com.kerimbr.kotlinsuperleague.ui.base.BaseFragment
@@ -61,11 +63,20 @@ class StandingsFragment : BaseFragment() {
 
     private fun initRecyclerView(standings: List<Standing>) {
         binding.standingsRecyclerView.apply {
-            layoutManager = LinearLayoutManager(requireContext())
+            //layoutManager = LinearLayoutManager(requireContext())
+            layoutManager =  LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
             adapter = StandingsRVAdapter(
                 standings = standings,
-                onStandingClicked = null
+                onStandingClicked = onStandingClicked()
             )
+        }
+    }
+
+    private fun onStandingClicked() : BaseRVAdapter.OnItemClickListener<Standing> {
+        return object : BaseRVAdapter.OnItemClickListener<Standing> {
+            override fun onItemClick(item: Standing) {
+                println("Item clicked: ${item.team.name}")
+            }
         }
     }
 

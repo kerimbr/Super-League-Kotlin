@@ -35,15 +35,15 @@
                     app:navigationIcon="@drawable/ic_round_menu_24"
                     app:title="@string/title_standings" />
 
-                <com.google.android.material.progressindicator.LinearProgressIndicator
-                    android:id="@+id/standings_linear_progress_indicator"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:indeterminate="true"
-                    app:trackCornerRadius="5dp"
-                    app:trackThickness="4dp" />
-
             </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/standings_linear_progress_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:indeterminate="true"
+                app:trackCornerRadius="5dp"
+                app:trackThickness="4dp" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <!--Table-->
@@ -51,16 +51,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/standings_recycler_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:listitem="@layout/item_standings_table_row"
+                android:orientation="horizontal"
+                android:scrollbars="horizontal"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            />
-
+                tools:listitem="@layout/item_standings_table_row" />
         </HorizontalScrollView>
+
 
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

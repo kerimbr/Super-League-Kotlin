@@ -1,6 +1,7 @@
 package com.kerimbr.kotlinsuperleague.adapters
 
 
+import android.graphics.Typeface
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kerimbr.kotlinsuperleague.R
 import com.kerimbr.kotlinsuperleague.adapters.base.BaseRVAdapter
@@ -24,11 +25,13 @@ class StandingsRVAdapter(
 
         if (position == 0){
             binding.isHeader = true
+            setRowTextStyle(binding, true)
         } else {
 
             val item: Standing = standings[position - 1]
 
             binding.isHeader = false
+            setRowTextStyle(binding, false)
             binding.standing = item
 
             val formAdapter = TeamFormRVAdapter(
@@ -49,9 +52,38 @@ class StandingsRVAdapter(
                 }
             }
         }
+
     }
 
     override fun getItemCount(): Int {
         return super.getItemCount() + 1
+    }
+
+    private fun setRowTextStyle(binding: ItemStandingsTableRowBinding, isHeader: Boolean) {
+        if (isHeader){
+            binding.standingsTableRowPosition.typeface = Typeface.DEFAULT_BOLD
+            binding.standingsTableRowTeamName.typeface = Typeface.DEFAULT_BOLD
+            binding.standingsTableRowMP.typeface = Typeface.DEFAULT_BOLD
+            binding.standingsTableRowW.typeface = Typeface.DEFAULT_BOLD
+            binding.standingsTableRowD.typeface = Typeface.DEFAULT_BOLD
+            binding.standingsTableRowL.typeface = Typeface.DEFAULT_BOLD
+            binding.standingsTableRowGF.typeface = Typeface.DEFAULT_BOLD
+            binding.standingsTableRowGA.typeface = Typeface.DEFAULT_BOLD
+            binding.standingsTableRowGD.typeface = Typeface.DEFAULT_BOLD
+            binding.standingsTableRowP.typeface = Typeface.DEFAULT_BOLD
+            binding.standingsTableRowForm.typeface = Typeface.DEFAULT_BOLD
+        }else{
+            binding.standingsTableRowPosition.typeface = Typeface.DEFAULT
+            binding.standingsTableRowTeamName.typeface = Typeface.DEFAULT
+            binding.standingsTableRowMP.typeface = Typeface.DEFAULT
+            binding.standingsTableRowW.typeface = Typeface.DEFAULT
+            binding.standingsTableRowD.typeface = Typeface.DEFAULT
+            binding.standingsTableRowL.typeface = Typeface.DEFAULT
+            binding.standingsTableRowGF.typeface = Typeface.DEFAULT
+            binding.standingsTableRowGA.typeface = Typeface.DEFAULT
+            binding.standingsTableRowGD.typeface = Typeface.DEFAULT
+            binding.standingsTableRowP.typeface = Typeface.DEFAULT
+            binding.standingsTableRowForm.typeface = Typeface.DEFAULT
+        }
     }
 }

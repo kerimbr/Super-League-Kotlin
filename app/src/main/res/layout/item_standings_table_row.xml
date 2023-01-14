@@ -6,6 +6,7 @@
 
     <data>
         <import type="android.view.View"/>
+        <import type="android.R"/>
         <variable
             name="utils"
             type="com.kerimbr.kotlinsuperleague.utils.Utils" />
@@ -22,10 +23,10 @@
         android:layout_height="wrap_content">
 
         <TableRow
-            android:id="@+id/standingsTableRow"
-            android:background="@{isHeader ? @color/md_theme_light_tertiaryContainer : @color/md_theme_light_surface }">
+            android:id="@+id/standingsTableRow">
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/standingsTableRowPosition"
                 style="@style/TextAppearance.AppCompat.Small"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -57,6 +58,7 @@
                 app:tint="@color/md_theme_light_tertiary" />
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/standingsTableRowTeamName"
                 style="@style/TextAppearance.AppCompat.Small"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
@@ -69,6 +71,7 @@
 
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/standingsTableRowMP"
                 style="@style/TextAppearance.AppCompat.Small"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
@@ -78,6 +81,7 @@
                 android:text="@{isHeader ? `MP` : String.valueOf(standing.all.played) }" />
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/standingsTableRowW"
                 style="@style/TextAppearance.AppCompat.Small"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
@@ -87,6 +91,7 @@
                 android:text="@{isHeader ? `W` : String.valueOf(standing.all.win)}" />
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/standingsTableRowD"
                 style="@style/TextAppearance.AppCompat.Small"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
@@ -96,6 +101,7 @@
                 android:text="@{isHeader ? `D` : String.valueOf(standing.all.draw)}" />
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/standingsTableRowL"
                 style="@style/TextAppearance.AppCompat.Small"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
@@ -105,6 +111,7 @@
                 android:text="@{isHeader ? `L` : String.valueOf(standing.all.lose)}" />
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/standingsTableRowGF"
                 style="@style/TextAppearance.AppCompat.Small"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
@@ -114,6 +121,7 @@
                 android:text="@{isHeader ? `GF` : String.valueOf(standing.all.goals.forX)}" />
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/standingsTableRowGA"
                 style="@style/TextAppearance.AppCompat.Small"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
@@ -123,6 +131,7 @@
                 android:text="@{isHeader ? `GA` : String.valueOf(standing.all.goals.against)}" />
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/standingsTableRowGD"
                 style="@style/TextAppearance.AppCompat.Small"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
@@ -132,6 +141,7 @@
                 android:text="@{isHeader ? `GD` : String.valueOf(standing.goalsDiff)}" />
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/standingsTableRowP"
                 style="@style/TextAppearance.AppCompat.Small"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
@@ -142,6 +152,7 @@
 
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/standingsTableRowForm"
                 style="@style/TextAppearance.AppCompat.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
